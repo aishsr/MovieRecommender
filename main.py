@@ -11,10 +11,10 @@ class RecSystem:
     def __init__(self):
 
         # Users and Ratings
-        self.data_users = pd.read_csv('ml-latest-small/ratings.csv')
+        self.data_users = pd.read_csv('ratings.csv')
 
         # Movie titles
-        self.movie_titles = pd.read_csv('ml-latest-small/movies.csv')
+        self.movie_titles = pd.read_csv('movies.csv')
 
         self.data = pd.merge(self.data_users, self.movie_titles, on='movieId')
 
